@@ -1,0 +1,107 @@
+/* ====================================================
+   Variables de Tema (CSS Puro)
+   ==================================================== */
+:root {
+  --bg-color: #f8fafc;
+  --text-color: #0f172a;
+  --btn-bg: #ffffff;
+  --btn-border: #e2e8f0;
+  --btn-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  --btn-shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* Modo oscuro activado cuando el checkbox está :checked */
+:root:has(#theme-toggle:checked) {
+  --bg-color: #0f172a;
+  --text-color: #f8fafc;
+  --btn-bg: #1e293b;
+  --btn-border: #334155;
+  --btn-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  --btn-shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* ====================================================
+   Estilos Generales
+   ==================================================== */
+body {
+  margin: 0;
+  padding: 2rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ====================================================
+   Botón Flotante (Toggle Theme)
+   ==================================================== */
+/* Ocultamos el checkbox real */
+.theme-toggle-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Botón flotante inferior derecho */
+.theme-toggle-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: var(--btn-bg);
+  border: 1px solid var(--btn-border);
+  box-shadow: var(--btn-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+  user-select: none;
+  font-size: 1.4rem;
+  transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+.theme-toggle-btn:hover {
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: var(--btn-shadow-hover);
+}
+
+.theme-toggle-btn:active {
+  transform: translateY(0) scale(0.95);
+}
+
+/* Animación de iconos */
+.theme-toggle-btn .icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Estado Claro: Sol visible, Luna oculta */
+.theme-toggle-btn .sun {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.theme-toggle-btn .moon {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.5);
+}
+
+/* Estado Oscuro: Luna visible, Sol oculto */
+:root:has(#theme-toggle:checked) .theme-toggle-btn .sun {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.5);
+}
+
+:root:has(#theme-toggle:checked) .theme-toggle-btn .moon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
