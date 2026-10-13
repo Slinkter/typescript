@@ -1,15 +1,7 @@
-/*  */
-type StrOrNum = string | number
-/*  */
-function addElement(a:StrOrNum,b:StrOrNum){
-    if(typeof a ==="string" || typeof b ==='string'){
-        return a.toString() + b.toString()
-    }
-    return a + b
-}
+const theInput2 = ''
+const storedInput2=theInput2 ?? 'Default2'
+console.log(storedInput2);
 
-const result1 = addElement(1,2)
-const result2 = addElement('Nabendu',' Biswas')
-const result3 = addElement('Nabendu',2)
-result2.split('')
- 
+const theInput3 = null
+const storedInput3 = theInput3 ?? 'default 3'
+console.log(storedInput3);
