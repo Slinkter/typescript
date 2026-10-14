@@ -1,0 +1,63 @@
+# Dependencies
+node_modules/
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# Next.js / Build outputs
+.next/
+out/
+build/
+dist/
+
+# Production & Packaging
+*.tgz
+*.tar.gz
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Testing & Coverage
+coverage/
+.nyc_output/
+
+# TypeScript cache
+*.tsbuildinfo
+next-env.d.ts
+
+# Vercel / Turbopack
+.vercel
+.turbo
+
+# IDE & Editors
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.sublime-workspace
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
