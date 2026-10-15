@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    /* Lenguaje y entorno */
+    "target": "ES2022", /* Versión de JS a la que se compilará */
+    "module": "ESNext", /* Formato de módulos */
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ], /* Incluye soporte para el navegador (document, window, etc.) */
+    /* Depuración */
+    "sourceMap": true, /* Crea archivos .map para ver el .ts en las herramientas de desarrollo del navegador */
+    /* Comprobaciones de tipos estrictas (Recomendado para aprender) */
+    "strict": true, /* Activa todas las reglas estrictas de verificación de tipos */
+    "noImplicitAny": true, /* Avisa si una variable o parámetro no tiene tipo definido */
+    "strictNullChecks": true, /* Evita errores comunes con null y undefined */
+    /* Compatibilidad y optimización */
+    "esModuleInterop": true, /* Facilita la importación de librerías CommonJS */
+    "forceConsistentCasingInFileNames": true, /* Exige coincidencia exacta de mayúsculas/minúsculas en rutas */
+    "skipLibCheck": true /* Acelera la compilación ignorando chequeo en librerías externas */
+  },
+  "include": [
+    "**/*.ts"
+  ]
+}
