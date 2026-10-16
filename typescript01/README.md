@@ -24,9 +24,9 @@ Repositorio de estudio práctico capítulo por capítulo basado en el libro ***T
 | **05** | Advanced Types | `955` – `1210` | [`chapter05/`](./chapter05/) | ✅ Completado |
 | **06** | Generics and Decorators | `1211` – `1593` | [`chapter06/`](./chapter06/) y [`chapter06a/`](./chapter06a/) | ✅ Completado |
 | **07** | Project: To-do List with TypeScript | `1594` – `1751` | [`chapter07/to-do-list/`](./chapter07/to-do-list/) *(Next.js + Tailwind)* | ✅ Completado |
-| **08** | Project: Drag-and-Drop with TypeScript | `1752` – `2612` | [`chapter08/`](./chapter08/) | ⏳ **En curso** |
-| **09** | Improving the Drag-and-Drop Project (ES6 + Webpack) | `2613` – `3024` | `chapter09/` *(Próximo)* | 🔜 Pendiente |
-| **10** | Project: Party App in ReactJS with TypeScript | `3025` – `3299` | `chapter10/` *(Próximo)* | 🔜 Pendiente |
+| **08** | Project: Drag-and-Drop with TypeScript | `1752` – `2612` | [`chapter08/`](./chapter08/) | ✅ Completado |
+| **09** | Improving the Drag-and-Drop Project (ES6 + Webpack) | `2613` – `3024` | [`chapter09/`](./chapter09/) | ✅ Completado |
+| **10** | Project: Party App in ReactJS with TypeScript | `3025` – `3299` | `chapter10/` *(Próximo)* | ⏳ **En curso** |
 | **11** | Using React Redux with TypeScript | `3300` – `3502` | `chapter11/` *(Próximo)* | 🔜 Pendiente |
 
 ---

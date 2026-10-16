@@ -1,0 +1,16 @@
+{
+  "name": "drag-drop",
+  "version": "1.0.0",
+  "description": "Chapter 8 - Drag and Drop Project with TypeScript",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "keywords": [
+    "typescript",
+    "drag-and-drop"
+  ],
+  "author": "",
+  "license": "ISC"
+}

@@ -41,9 +41,9 @@ Este archivo es leído automáticamente por Antigravity (`agy`) al trabajar en `
 | **Cap. 5** | Advanced Types | `955` – `1210` | `chapter05/` (`advancedDemo.ts`, `guards.ts`, `overloading.ts`) | ✅ Completado |
 | **Cap. 6** | Generics and Decorators | `1211` – `1593` | `chapter06/` (`genericDemo.ts`) y `chapter06a/` (`decoratorsDemo.ts`) | ✅ Completado |
 | **Cap. 7** | Creating a To-do List Project with TypeScript | `1594` – `1751` | `chapter07/to-do-list/` (Adaptado a Next.js + React + Tailwind CSS) | ✅ Completado |
-| **Cap. 8** | Creating a Drag-and-Drop Project with TypeScript | `1752` – `2612` | `chapter08/` (`readme.md` vacío actualmente) | ⏳ **EN CURSO (Próximo a estudiar)** |
-| **Cap. 9** | Improving the Drag-and-Drop Project | `2613` – `3024` | *(Por crear: `chapter09/`)* | 🔜 Pendiente |
-| **Cap. 10** | Creating a Party App in ReactJS with TypeScript | `3025` – `3299` | *(Por crear: `chapter10/`)* | 🔜 Pendiente |
+| **Cap. 8** | Creating a Drag-and-Drop Project with TypeScript | `1752` – `2612` | `chapter08/` (`readme.md` y `drag-drop/`) | ✅ Completado |
+| **Cap. 9** | Improving the Drag-and-Drop Project | `2613` – `3024` | `chapter09/` (`readme.md` y `drag-drop/` con ES6 Modules + Webpack) | ✅ Completado |
+| **Cap. 10** | Creating a Party App in ReactJS with TypeScript | `3025` – `3299` | *(Por crear: `chapter10/`)* | ⏳ **EN CURSO (Próximo a estudiar)** |
 | **Cap. 11** | Using React Redux with TypeScript | `3300` – `3502` | *(Por crear: `chapter11/`)* | 🔜 Pendiente |
 
 ---
