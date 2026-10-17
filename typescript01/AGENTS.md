@@ -34,17 +34,17 @@ Este archivo es leído automáticamente por Antigravity (`agy`) al trabajar en `
 | Capítulo | Título | Rango de Líneas en `LIBRO-REACT-2023.md` | Carpeta de Práctica | Estado |
 | :---: | :--- | :---: | :--- | :--- |
 | **Intro** | Introduction | `20` – `25` | — | 📖 Leído |
-| **Cap. 1** | Getting Started | `26` – `79` | — | ✅ Completado |
-| **Cap. 2** | TypeScript Basics | `80` – `422` | — | ✅ Completado |
-| **Cap. 3** | The TypeScript Compiler | `423` – `489` | — | ✅ Completado |
-| **Cap. 4** | Classes and Interfaces | `490` – `954` | — | ✅ Completado |
+| **Cap. 1** | Getting Started | `26` – `79` | `chapter01/` (`readme.md`, `main.ts`, `ejercicios.ts`) | ✅ Completado |
+| **Cap. 2** | TypeScript Basics | `80` – `422` | `chapter02/` (`readme.md`, `basicsDemo.ts`, `ejercicios.ts`) | ✅ Completado |
+| **Cap. 3** | The TypeScript Compiler | `423` – `489` | `chapter03/` (`readme.md`, `src/main.ts`, `src/ejercicios.ts`) | ✅ Completado |
+| **Cap. 4** | Classes and Interfaces | `490` – `954` | `chapter04/` (`readme.md`, `classDemo.ts`, `interfaceDemo.ts`, `ejercicios.ts`) | ✅ Completado |
 | **Cap. 5** | Advanced Types | `955` – `1210` | `chapter05/` (`advancedDemo.ts`, `guards.ts`, `overloading.ts`) | ✅ Completado |
 | **Cap. 6** | Generics and Decorators | `1211` – `1593` | `chapter06/` (`genericDemo.ts`) y `chapter06a/` (`decoratorsDemo.ts`) | ✅ Completado |
 | **Cap. 7** | Creating a To-do List Project with TypeScript | `1594` – `1751` | `chapter07/to-do-list/` (Adaptado a Next.js + React + Tailwind CSS) | ✅ Completado |
 | **Cap. 8** | Creating a Drag-and-Drop Project with TypeScript | `1752` – `2612` | `chapter08/` (`readme.md` y `drag-drop/`) | ✅ Completado |
-| **Cap. 9** | Improving the Drag-and-Drop Project | `2613` – `3024` | `chapter09/` (`readme.md` y `drag-drop/` con ES6 Modules + Webpack) | ✅ Completado |
-| **Cap. 10** | Creating a Party App in ReactJS with TypeScript | `3025` – `3299` | *(Por crear: `chapter10/`)* | ⏳ **EN CURSO (Próximo a estudiar)** |
-| **Cap. 11** | Using React Redux with TypeScript | `3300` – `3502` | *(Por crear: `chapter11/`)* | 🔜 Pendiente |
+| **Cap. 9** | Improving the Drag-and-Drop Project | `2613` – `3024` | `chapter09/` (`readme.md` y `drag-drop/` con ES6 Modules + Webpack) | 📖 En estudio / Completado |
+| **Cap. 10** | Creating a Party App in ReactJS with TypeScript | `3025` – `3299` | `chapter10/` (`readme.md` creado; proyecto práctico pendiente) | ⏳ **EN CURSO (Resumen listo)** |
+| **Cap. 11** | Using React Redux with TypeScript | `3300` – `3502` | *(Por crear: `chapter11/`)* | 🔜 Pendiente (Último capítulo) |
 
 ---
 
@@ -53,5 +53,5 @@ Este archivo es leído automáticamente por Antigravity (`agy`) al trabajar en `
 Cuando el usuario pida estudiar un capítulo:
 1. Lee únicamente el rango de líneas correspondiente en `LIBRO-REACT-2023.md`.
 2. Si el capítulo hace referencia a alguna captura visual importante (`Figure X-Y`), puedes inspeccionar la imagen correspondiente en `book_images/fig_XX_pYY.jpeg` usando `view_file`.
-3. Explica los conceptos de forma clara y estructurada, guiando paso a paso la codificación dentro de la carpeta `chapterXX` correspondiente.
+3. Explica los conceptos de forma clara, sencilla y estructurada, guiando paso a paso la codificación dentro de la carpeta `chapterXX` correspondiente.
 4. Al finalizar un capítulo, actualiza la tabla de estado en este archivo `AGENTS.md` y en `README.md`.

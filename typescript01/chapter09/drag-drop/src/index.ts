@@ -1,6 +1,6 @@
+import { prjState } from './state/state';
 import { Input } from './components/input';
 import { List } from './components/list';
-import { prjState } from './state/state';
 
 new Input();
 new List('active');
