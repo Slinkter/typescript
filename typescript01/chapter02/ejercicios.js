@@ -62,3 +62,4 @@ for (const item of carrito) {
     totalCarrito += item.precio;
 }
 console.log("Ejercicio 5 -> Productos en carrito:", carrito.length, "| Total a pagar: $" + totalCarrito);
+/*  */
