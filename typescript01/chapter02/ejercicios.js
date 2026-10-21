@@ -22,7 +22,7 @@ console.log(`Ejercicio 1 -> Descuento aplicado: ${descuento}%`);
 // ----------------------------------------------------------
 const libro = {
     titulo: "TypeScript Basics",
-    paginas: 170
+    paginas: 170,
     // Como 'subtitulo' tiene '?', no es obligatorio ponerlo
 };
 console.log("Ejercicio 2 -> Libro:", libro);
@@ -48,14 +48,14 @@ var MetodoPago;
     MetodoPago[MetodoPago["TARJETA"] = 1] = "TARJETA";
     MetodoPago[MetodoPago["YAPE"] = 2] = "YAPE";
 })(MetodoPago || (MetodoPago = {}));
-const miCafe = 'mediano';
+const miCafe = "mediano";
 const pagoElegido = MetodoPago.YAPE;
 let idPedido = "PED-101";
 console.log(`Ejercicio 4 -> Pedido ${idPedido}: Café ${miCafe} (Método de pago #${pagoElegido})`);
 const carrito = [
     { nombre: "Teclado Mecánico", precio: 50 },
     { nombre: "Mouse Inalámbrico", precio: 25 },
-    { nombre: "Pad de Escritorio", precio: 15 }
+    { nombre: "Pad de Escritorio", precio: 15 },
 ];
 let totalCarrito = 0;
 for (const item of carrito) {

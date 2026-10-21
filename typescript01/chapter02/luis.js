@@ -1,8 +1,20 @@
 "use strict";
-console.log("ejecricio luis");
-const calcularAreaRectangulo2 = (base, altura) => {
-    return base * altura;
-};
-const imprimirResultado2 = (texto, a) => {
-    console.log(texto, a);
-};
+const listCarrito = [
+    {
+        nombre: "jabon",
+        precio: 1,
+    },
+    {
+        nombre: "papel",
+        precio: 2,
+    },
+    {
+        nombre: "cafe",
+        precio: 3,
+    },
+];
+let total = 0;
+listCarrito.map((x) => {
+    total = total + x.precio;
+});
+console.log(total);

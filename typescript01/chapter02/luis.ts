@@ -1,8 +1,27 @@
-console.log("ejecricio luis");
-const calcularAreaRectangulo2 = (base: number, altura: number): number => {
-  return base * altura;
-};
+interface Producto {
+  nombre: string;
+  precio: number;
+}
 
-const imprimirResultado2 = (texto: string, a: number): void => {
-  console.log(texto, a);
-};
+const listCarrito: Producto[] = [
+  {
+    nombre: "jabon",
+    precio: 1,
+  },
+  {
+    nombre: "papel",
+    precio: 2,
+  },
+  {
+    nombre: "cafe",
+    precio: 3,
+  },
+];
+
+let total = 0;
+
+for (const x of listCarrito) {
+  total = total + x.precio;
+}
+
+console.log(total);
