@@ -21,7 +21,7 @@ Repositorio de estudio práctico capítulo por capítulo basado en el libro ***T
 | **02** | TypeScript Basics | `80` – `422` | [`chapter02/`](./chapter02/) (`readme.md`, `basicsDemo.ts`, `ejercicios.ts`) | ✅ Completado |
 | **03** | The TypeScript Compiler | `423` – `489` | [`chapter03/`](./chapter03/) (`readme.md`, `src/main.ts`, `src/ejercicios.ts`) | ✅ Completado |
 | **04** | Classes and Interfaces | `490` – `954` | [`chapter04/`](./chapter04/) (`readme.md`, `classDemo.ts`, `interfaceDemo.ts`, `ejercicios.ts`) | ✅ Completado |
-| **05** | Advanced Types | `955` – `1210` | [`chapter05/`](./chapter05/) (`advancedDemo.ts`, `guards.ts`, `overloading.ts`) | ✅ Completado |
+| **05** | Advanced Types | `955` – `1210` | [`chapter05/`](./chapter05/) (`readme.md`, `src/advancedDemo.ts`, `src/ejercicios.ts`) | ✅ Completado |
 | **06** | Generics and Decorators | `1211` – `1593` | [`chapter06/`](./chapter06/) y [`chapter06a/`](./chapter06a/) | ✅ Completado |
 | **07** | Project: To-do List with TypeScript | `1594` – `1751` | [`chapter07/to-do-list/`](./chapter07/to-do-list/) *(Next.js + Tailwind)* | ✅ Completado |
 | **08** | Project: Drag-and-Drop with TypeScript | `1752` – `2612` | [`chapter08/`](./chapter08/) (`readme.md` y `drag-drop/`) | ✅ Completado |

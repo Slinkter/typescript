@@ -38,7 +38,7 @@ Este archivo es leído automáticamente por Antigravity (`agy`) al trabajar en `
 | **Cap. 2** | TypeScript Basics | `80` – `422` | `chapter02/` (`readme.md`, `basicsDemo.ts`, `ejercicios.ts`) | ✅ Completado |
 | **Cap. 3** | The TypeScript Compiler | `423` – `489` | `chapter03/` (`readme.md`, `src/main.ts`, `src/ejercicios.ts`) | ✅ Completado |
 | **Cap. 4** | Classes and Interfaces | `490` – `954` | `chapter04/` (`readme.md`, `classDemo.ts`, `interfaceDemo.ts`, `ejercicios.ts`) | ✅ Completado |
-| **Cap. 5** | Advanced Types | `955` – `1210` | `chapter05/` (`advancedDemo.ts`, `guards.ts`, `overloading.ts`) | ✅ Completado |
+| **Cap. 5** | Advanced Types | `955` – `1210` | `chapter05/` (`readme.md`, `src/advancedDemo.ts`, `src/ejercicios.ts`) | ✅ Completado |
 | **Cap. 6** | Generics and Decorators | `1211` – `1593` | `chapter06/` (`genericDemo.ts`) y `chapter06a/` (`decoratorsDemo.ts`) | ✅ Completado |
 | **Cap. 7** | Creating a To-do List Project with TypeScript | `1594` – `1751` | `chapter07/to-do-list/` (Adaptado a Next.js + React + Tailwind CSS) | ✅ Completado |
 | **Cap. 8** | Creating a Drag-and-Drop Project with TypeScript | `1752` – `2612` | `chapter08/` (`readme.md` y `drag-drop/`) | ✅ Completado |
