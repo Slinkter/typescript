@@ -4,7 +4,8 @@
   "description": "Chapter 9 - Improving the Drag-and-Drop Project with ES6 Modules and Webpack",
   "main": "dist/bundle.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "dev": "webpack serve"
   },
   "keywords": [
     "typescript",

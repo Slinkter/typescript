@@ -6,9 +6,15 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
-        publicPath: 'dist'
+        publicPath: '/dist/'
     },
     devtool: 'inline-source-map',
+    devServer: {
+        static: {
+            directory: path.resolve(__dirname)
+        },
+        port: 8080
+    },
     module: {
         rules: [
             {

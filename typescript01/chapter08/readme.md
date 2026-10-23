@@ -485,3 +485,21 @@ const finishedList = new List('finished');
    - Al empezar a arrastrar, `Item.dragStartHandler` guarda el `id` del proyecto en `dataTransfer`.
    - Al soltar sobre la columna azul, `List.dropHandler` lee ese `id` y llama a `prjState.moveProject(id, ProjectStatus.Finished)`.
    - `prjState` cambia el estatus a `Finished`, avisa a ambas columnas y ambas se redibujan automáticamente.
+
+---
+
+## 6. Cómo ejecutar
+
+Requisitos: Node.js 18+ y npm.
+
+```bash
+cd chapter08/drag-drop
+npm install      # instala typescript (devDependency)
+npm run build    # compila src/index.ts -> dist/index.js
+npx serve .      # sirve la carpeta; abre http://localhost:3000
+```
+
+- El `build` usa `tsc` con [`tsconfig.json`](./drag-drop/tsconfig.json): `rootDir: ./src` y `outDir: ./dist`.
+- [`index.html`](./drag-drop/index.html) carga `<script src="dist/index.js"></script>`, así que debe abrirse **desde la raíz del proyecto** (no desde `dist/`).
+- Durante el desarrollo, `npm run watch` recompila al guardar cambios.
+- Si prefieres no instalar `serve`, también funciona abrir `index.html` con doble clic: el JS compilado no usa módulos ES y no necesita servidor.

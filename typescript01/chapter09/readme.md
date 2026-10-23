@@ -83,3 +83,21 @@ Cuando divides tu código en 8 archivos `.ts` y usas solo `tsc`:
 - **Tú programas cómodo** en 8 archivos chiquitos y ordenados dentro de `src/`.
 - **El navegador descarga 1 solo archivo** (`dist/bundle.js`).
 - *(Nota: En proyectos modernos como el que hicimos en el Capítulo 7 con Next.js, Next.js ya trae Webpack/Turbopack por dentro automáticamente sin que tú tengas que configurarlo a mano).*
+
+---
+
+## 4. Cómo ejecutar
+
+Requisitos: Node.js 18+ y pnpm (o npm).
+
+```bash
+cd chapter09/drag-drop
+pnpm install     # respeta pnpm-lock.yaml
+pnpm build       # webpack + ts-loader -> dist/bundle.js
+npx serve .      # sirve la carpeta; abre http://localhost:3000
+```
+
+- [`webpack.config.js`](./drag-drop/webpack.config.js) usa `mode: 'development'` (suficiente para el libro), `ts-loader` y genera `dist/bundle.js`.
+- [`index.html`](./drag-drop/index.html) carga `<script src="dist/bundle.js"></script>`, por eso hay que servirlo desde la raíz del proyecto.
+- Alternativa con recarga automática: `pnpm dev` (ejecuta `webpack serve` en `http://localhost:8080`).
+- Abrir `index.html` directamente con doble clic **no** funciona aquí: el bundle usa módulos internos de Webpack y necesita servirse por HTTP.
