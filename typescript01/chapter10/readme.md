@@ -220,3 +220,41 @@ const AddToPeople: React.FC<IProps> = ({ setPeople, people }) => {
 
 export default AddToPeople;
 ```
+
+> **Nota de implementación:** el proyecto usa la firma moderna `const Component = ({ ... }: IProps) => ...` en lugar de `React.FC<IProps>`. El tipado de props y eventos es equivalente; además, el tipo `Person` se comparte desde `src/types/person.ts` para evitar duplicar la interfaz en cada componente.
+
+---
+
+## 4. Estado del Proyecto
+
+✅ **Completado** — implementado en `chapter10/party-app/` y verificado con `npm run build`.
+
+### Estructura final
+
+```text
+chapter10/
+├── readme.md
+└── party-app/
+    ├── index.html
+    ├── package.json
+    ├── tsconfig.json
+    ├── vite.config.ts
+    └── src/
+        ├── main.tsx
+        ├── App.tsx
+        ├── App.css
+        ├── types/
+        │   └── person.ts
+        └── components/
+            ├── PeopleList.tsx
+            └── AddToPeople.tsx
+```
+
+### Comandos
+
+```bash
+cd chapter10/party-app
+npm install
+npm run dev     # servidor de desarrollo
+npm run build   # type-check + build de producción en dist/
+```
