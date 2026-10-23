@@ -39,12 +39,12 @@ Este archivo es leído automáticamente por Antigravity (`agy`) al trabajar en `
 | **Cap. 3** | The TypeScript Compiler | `423` – `489` | `chapter03/` (`readme.md`, `src/main.ts`, `src/ejercicios.ts`) | ✅ Completado |
 | **Cap. 4** | Classes and Interfaces | `490` – `954` | `chapter04/` (`readme.md`, `classDemo.ts`, `interfaceDemo.ts`, `ejercicios.ts`) | ✅ Completado |
 | **Cap. 5** | Advanced Types | `955` – `1210` | `chapter05/` (`readme.md`, `src/advancedDemo.ts`, `src/ejercicios.ts`) | ✅ Completado |
-| **Cap. 6** | Generics and Decorators | `1211` – `1593` | `chapter06/` (`genericDemo.ts`) y `chapter06a/` (`decoratorsDemo.ts`) | ✅ Completado |
+| **Cap. 6** | Generics and Decorators | `1211` – `1593` | `chapter06/` (`genericDemo.ts` + `readme.md`) y `chapter06a/` (`decoratorsDemo.ts` + `readme.md`) | ✅ Completado |
 | **Cap. 7** | Creating a To-do List Project with TypeScript | `1594` – `1751` | `chapter07/to-do-list/` (Adaptado a Next.js + React + Tailwind CSS) | ✅ Completado |
 | **Cap. 8** | Creating a Drag-and-Drop Project with TypeScript | `1752` – `2612` | `chapter08/` (`readme.md` y `drag-drop/`) | ✅ Completado |
-| **Cap. 9** | Improving the Drag-and-Drop Project | `2613` – `3024` | `chapter09/` (`readme.md` y `drag-drop/` con ES6 Modules + Webpack) | 📖 En estudio / Completado |
-| **Cap. 10** | Creating a Party App in ReactJS with TypeScript | `3025` – `3299` | `chapter10/` (`readme.md` creado; proyecto práctico pendiente) | ⏳ **EN CURSO (Resumen listo)** |
-| **Cap. 11** | Using React Redux with TypeScript | `3300` – `3502` | *(Por crear: `chapter11/`)* | 🔜 Pendiente (Último capítulo) |
+| **Cap. 9** | Improving the Drag-and-Drop Project | `2613` – `3024` | `chapter09/` (`readme.md` y `drag-drop/` con ES6 Modules + Webpack) | ✅ Completado |
+| **Cap. 10** | Creating a Party App in ReactJS with TypeScript | `3025` – `3299` | `chapter10/party-app/` (Vite + React + TS) | ✅ Completado |
+| **Cap. 11** | Using React Redux with TypeScript | `3300` – `3502` | `chapter11/redux-app/` (Vite + React + Redux clásico) | ✅ Completado |
 
 ---
 
@@ -55,3 +55,32 @@ Cuando el usuario pida estudiar un capítulo:
 2. Si el capítulo hace referencia a alguna captura visual importante (`Figure X-Y`), puedes inspeccionar la imagen correspondiente en `book_images/fig_XX_pYY.jpeg` usando `view_file`.
 3. Explica los conceptos de forma clara, sencilla y estructurada, guiando paso a paso la codificación dentro de la carpeta `chapterXX` correspondiente.
 4. Al finalizar un capítulo, actualiza la tabla de estado en este archivo `AGENTS.md` y en `README.md`.
+
+---
+
+## 5. Verificación Global
+
+Desde la raíz del proyecto:
+
+```bash
+./scripts/verify-all.sh
+```
+
+El script comprueba:
+
+- `tsc --noEmit` en los capítulos 01–06a, 08 y 09.
+- Ejecución con Node de las demos de 01, 02, 04, 06 y 06a.
+- Compilación de 03 y 05.
+- `build` de las apps de 07, 08, 09, 10 y 11.
+
+**Resultado esperado:** 22 comprobaciones correctas, 0 fallos.
+
+### Notas de correcciones recientes
+
+- **Cap. 3:** `index.html` ahora carga `dist/main.js` y `dist/ejercicios.js` (antes apuntaba a `dist/example.js`).
+- **Cap. 4:** erratas del libro corregidas y documentadas (template strings rotos, `kapil` con `'Shobha'`).
+- **Cap. 6:** se completaron genéricos y decoradores; `chapter06a/tsconfig.json` habilita `experimentalDecorators`.
+- **Cap. 7:** corregido el `line-through` de las tareas y los placeholders.
+- **Cap. 9:** `publicPath` de Webpack corregido a `/dist/` y añadido `pnpm dev`.
+- **Cap. 10:** Party App implementada (los 4 archivos estaban vacíos).
+- **Cap. 11:** app Redux creada con Redux clásico; `redux-thunk@2.4.2` para compatibilidad con Redux 4.

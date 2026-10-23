@@ -25,9 +25,29 @@ Repositorio de estudio práctico capítulo por capítulo basado en el libro ***T
 | **06** | Generics and Decorators | `1211` – `1593` | [`chapter06/`](./chapter06/) y [`chapter06a/`](./chapter06a/) | ✅ Completado |
 | **07** | Project: To-do List with TypeScript | `1594` – `1751` | [`chapter07/to-do-list/`](./chapter07/to-do-list/) *(Next.js + Tailwind)* | ✅ Completado |
 | **08** | Project: Drag-and-Drop with TypeScript | `1752` – `2612` | [`chapter08/`](./chapter08/) (`readme.md` y `drag-drop/`) | ✅ Completado |
-| **09** | Improving the Drag-and-Drop Project (ES6 + Webpack) | `2613` – `3024` | [`chapter09/`](./chapter09/) (`readme.md` y `drag-drop/`) | 📖 En estudio / Completado |
-| **10** | Project: Party App in ReactJS with TypeScript | `3025` – `3299` | [`chapter10/`](./chapter10/) (`readme.md` resumen listo) | ⏳ **En curso** |
-| **11** | Using React Redux with TypeScript | `3300` – `3502` | `chapter11/` *(Próximo)* | 🔜 Pendiente |
+| **09** | Improving the Drag-and-Drop Project (ES6 + Webpack) | `2613` – `3024` | [`chapter09/`](./chapter09/) (`readme.md` y `drag-drop/`) | ✅ Completado |
+| **10** | Project: Party App in ReactJS with TypeScript | `3025` – `3299` | [`chapter10/party-app/`](./chapter10/party-app/) *(Vite + React + TS)* | ✅ Completado |
+| **11** | Using React Redux with TypeScript | `3300` – `3502` | [`chapter11/redux-app/`](./chapter11/redux-app/) *(Vite + Redux clásico)* | ✅ Completado |
+
+---
+
+## ✅ Verificación Global
+
+```bash
+./scripts/verify-all.sh
+```
+
+Comprueba tipos (`tsc --noEmit`), ejecución con Node, compilación de los capítulos TS y builds de las apps 07–11. Resultado esperado: **22 correctos, 0 fallos**.
+
+### Correcciones destacadas
+
+- **Cap. 3:** el `index.html` ahora carga `dist/main.js` y `dist/ejercicios.js`.
+- **Cap. 4:** erratas del libro corregidas y documentadas.
+- **Cap. 6:** genéricos y decoradores completos (antes eran archivos casi vacíos).
+- **Cap. 7:** corregido el tachado de tareas y los placeholders.
+- **Cap. 9:** Webpack `publicPath` corregido y `pnpm dev` añadido.
+- **Cap. 10:** Party App implementada (los 4 archivos estaban en 0 bytes).
+- **Cap. 11:** app Redux creada desde cero.
 
 ---
 
@@ -36,6 +56,7 @@ Repositorio de estudio práctico capítulo por capítulo basado en el libro ***T
 Gracias al archivo [`AGENTS.md`](./AGENTS.md), cuando abras cualquier sesión nueva en esta carpeta, `agy` ya sabrá dónde está el libro, en qué línea empieza cada capítulo, que tu Python corre en Docker (`py_mamba-jupyter-mamba:latest`) y en qué capítulo vas.
 
 Solo tienes que decirle cosas como:
-- *"Armemos el proyecto práctico del Capítulo 10 en `chapter10`"*
-- *"Hazme un resumen y ejercicios del Capítulo 5 y 6"*
-- *"Continuemos con el Capítulo 11 (React Redux con TypeScript)"*
+- *"Explícame de nuevo los decoradores del Capítulo 6"*
+- *"Agrega ejercicios al Capítulo 9"*
+- *"Ejecuta `./scripts/verify-all.sh` y revisa que todo siga en verde"*
+- *"Moderniza el Capítulo 11 con Redux Toolkit"*
