@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# To-Do List — Capítulo 7
 
-## Getting Started
+Proyecto práctico del **Capítulo 7** del libro *TypeScript Basics: Learn TypeScript from Scratch and Solidify Your Skills with Projects* (Nabendu Biswas, 2023).
 
-First, run the development server:
+La idea original del capítulo es una lista de tareas construida con TypeScript. En este repositorio está implementada como una app de una sola página con **Next.js (App Router), React, TypeScript y Tailwind CSS**.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Funcionalidad
+
+- Agregar tareas desde un formulario (se ignoran los títulos vacíos o solo con espacios).
+- Marcar y desmarcar tareas como completadas; las completadas se muestran tachadas y en gris.
+- Contador de tareas completadas sobre el total.
+- Estado vacío cuando todavía no hay tareas.
+- Tipado estricto de las tareas mediante la interfaz `Task` (`app/types/task.ts`).
+- Formulario accesible: `label` asociada al input y botón `type="submit"`.
+
+## Estructura relevante
+
+```
+app/
+├── layout.tsx        # Layout raíz
+├── globals.css       # Tailwind CSS
+├── page.tsx          # Componentes TaskForm, TaskItem y página principal
+└── types/task.ts     # Interfaz Task
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Requisitos
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Node.js 20 o superior
+- pnpm (recomendado) o npm
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Comandos
 
-## Learn More
+Con pnpm:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+pnpm install
+pnpm dev      # servidor de desarrollo en http://localhost:3000
+pnpm build    # build de producción
+pnpm start    # sirve el build de producción
+pnpm lint     # ESLint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Con npm, sustituye `pnpm` por `npm run` (por ejemplo, `npm run dev`).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Estado del capítulo
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Capítulo 7 completado y adaptado a Next.js + React + TypeScript + Tailwind CSS. No se modificaron las versiones de Next.js, React ni Tailwind respecto al andamiaje del proyecto.
