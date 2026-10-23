@@ -1,2 +1,2 @@
 "use strict";
-interface;
+console.log("hola");
