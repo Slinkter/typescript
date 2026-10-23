@@ -101,7 +101,7 @@ class ConfiguracionTema {
     }
     static getInstance() {
         if (!ConfiguracionTema.instancia) {
-            ConfiguracionTema.instancia = new ConfiguracionTema('oscuro');
+            ConfiguracionTema.instancia = new ConfiguracionTema("oscuro");
         }
         return ConfiguracionTema.instancia;
     }
