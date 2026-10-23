@@ -13,6 +13,7 @@
     "strict": true, /* Activa todas las reglas estrictas de verificación de tipos */
     "noImplicitAny": true, /* Avisa si una variable o parámetro no tiene tipo definido */
     "strictNullChecks": true, /* Evita errores comunes con null y undefined */
+    "experimentalDecorators": true, /* Habilita los decoradores clásicos usados en el capítulo */
     /* Compatibilidad y optimización */
     "esModuleInterop": true, /* Facilita la importación de librerías CommonJS */
     "forceConsistentCasingInFileNames": true, /* Exige coincidencia exacta de mayúsculas/minúsculas en rutas */
