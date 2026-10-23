@@ -1,0 +1,65 @@
+.App {
+  width: 100%;
+  max-width: 420px;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(30, 64, 175, 0.12);
+  text-align: center;
+}
+
+.balance {
+  margin: 0;
+  font-size: 3.5rem;
+  line-height: 1.1;
+  color: #1e3a8a;
+  font-variant-numeric: tabular-nums;
+}
+
+.label {
+  margin: 0.5rem 0 2rem;
+  color: #64748b;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+
+.btn:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.4);
+  outline-offset: 2px;
+}
+
+.deposit {
+  background-color: #16a34a;
+}
+
+.withdraw {
+  background-color: #dc2626;
+}
