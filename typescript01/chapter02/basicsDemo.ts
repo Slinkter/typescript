@@ -81,10 +81,28 @@ arrOfArrays.push([21, 32, 13]);
 // ----------------------------------------------------------
 // 5. Funciones (Listings 2-10 y 2-11)
 // ----------------------------------------------------------
-// Función que recibe números y devuelve un número:
+// Listing 2-10: sin tipos, TypeScript no puede avisar del error.
+// @ts-expect-error - El libro demuestra que los parámetros sin tipo
+// se vuelven 'any' y el error pasa desapercibido.
+const addNums = (num1, num2) => {
+    return num1 + num2;
+};
+
+console.log("Sin tipos (10 + '20'):", addNums(10, '20'));
+
+// Listing 2-11: con tipos el error se detecta antes de ejecutar.
 const multiNums = (num1: number, num2: number): number => {
     return num1 * num2;
 };
+
+// El libro usa 'modNums' para demostrar el error de tipo de retorno:
+// declara ': number' pero devuelve un boolean.
+const modNums = (num1: number, num2: number): number => {
+    // @ts-expect-error - El retorno es boolean, pero se declaró number.
+    return num1 > num2;
+};
+
+console.log("modNums(10, 20):", modNums(10, 20));
 
 // Función que NO devuelve nada (void):
 const printSum = (num1: number, num2: number): void => {
@@ -119,10 +137,19 @@ const myRole = Role.ADMIN;
 const hridayRole: Role = Role.AUTHOR;
 console.log("Roles Enum -> myRole:", myRole, "| hridayRole:", hridayRole);
 
+// Listing 2-15: si no usas '?', estás obligado a poner age: undefined.
+let optionalObj: { name: string; age: number | undefined } = {
+    name: 'Nabendu',
+    age: undefined
+};
+
 // Propiedad opcional con '?': no hace falta pasar 'age' si no la tenemos
 let betterOptObj: { name: string; age?: number } = {
     name: 'Nabendu'
 };
+
+console.log("Objeto con age obligatorio:", optionalObj);
+console.log("Objeto con age opcional:", betterOptObj);
 
 
 // ----------------------------------------------------------
@@ -136,6 +163,15 @@ interface Developer {
 
 const person1: Developer = { name: 'Nabendu', age: 40, isDev: true };
 const person2: Developer = { name: 'Mousam', age: 39, isDev: true };
+
+// Listing 2-17: un 'type' equivalente a la interfaz Developer.
+type DeveloperType = {
+    name: string;
+    age: number;
+    isDev: boolean;
+};
+
+const person3: DeveloperType = { name: 'Nabendu', age: 40, isDev: true };
 
 // Con 'type' podemos tipar objetos, strings simples o arreglos completos:
 type PersonName = string;
@@ -152,5 +188,15 @@ const coder1: CoderType = [
     { name: 'Mousam', category: 'backend', age: 39 }
 ];
 
-console.log(`${person1.name} is a ${person1.isDev} Dev and is ${person1.age} years old`);
+// Listing 2-18: el libro usa comillas simples por error; aquí van
+// backticks para que las variables sí se interpolen.
+type DeveloperNewType = {
+    name: string;
+    age: number;
+    isDev: boolean;
+};
+
+const person5: DeveloperNewType = { name: 'Nabendu', age: 40, isDev: true };
+
+console.log(`${person5.name} is a ${person5.isDev} Dev and is ${person5.age} years old`);
 console.log("Lista de coders:", coder1);

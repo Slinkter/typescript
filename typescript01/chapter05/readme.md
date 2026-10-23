@@ -1,6 +1,6 @@
 # 📘 Guía de Estudio — Capítulo 5: Tipos Avanzados (Advanced Types)
 
-El **Capítulo 5** ([`LIBRO-REACT-2023.md`](../LIBRO-REACT-2023.md#L955-L1204)) cubre los tipos que convierten a TypeScript en algo más que "JavaScript con anotaciones": intersecciones, uniones, type guards, discriminated unions, casting, firmas de índice, sobrecarga de funciones y `??`.
+El **Capítulo 5** ([`LIBRO-REACT-2023.md`](../LIBRO-REACT-2023.md#L955-L1210)) cubre los tipos que convierten a TypeScript en algo más que "JavaScript con anotaciones": intersecciones, uniones, type guards, discriminated unions, casting, firmas de índice, sobrecarga de funciones y `??`.
 
 ---
 

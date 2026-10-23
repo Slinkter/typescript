@@ -106,12 +106,28 @@ flowchart TD
 
 ---
 
+### 2.7. Erratas corregidas del libro (Capítulo 4)
+
+El código de esta carpeta corrige estos errores del texto original:
+
+| Listing | Error en el libro | Corrección aplicada |
+| :---: | :--- | :--- |
+| **4-5** | `` console.log(`${this.room}`s room rent is ...`); `` (template string cerrado antes de tiempo) | `` `${this.room}'s room rent is $${this.roomRent}` `` |
+| **4-10** | El mismo template string roto en `cleanRoom` de `OyoRoom` | `` `${this.room}'s Oyo Room cleaned with ${soap}` `` |
+| **4-11** | El mismo template string roto en `cleanRoom` de `TreboHotel` | `` `${this.room}'s Trebo Room cleaned with ${soap}` `` |
+| **4-7 / 4-8** | `const kapil = new OyoRoom('Shobha', 1000);` (copia/pega) | No se crean objetos `shobha`/`kapil`; solo se prueba `shekar` |
+| **4-1** | `nabendu.family` accede a una propiedad `private` y rompe la compilación | Se explica el modificador, pero no se ejecuta el acceso inválido |
+
+Además, los archivos son una **versión consolidada**: `classDemo.ts` no repite la evolución `CreateRoom` → `Room` de los Listings 4-1 a 4-4; empieza directamente con la clase abstracta final (4-10) y sus hijas. `interfaceDemo.ts` muestra la versión final de `Naming`/`Greeting` (4-15 y 4-16).
+
+---
+
 ## 3. Archivos de Práctica en esta Carpeta (`chapter04/`)
 
 | Archivo | ¿Qué contiene? |
 | :--- | :--- |
-| [`classDemo.ts`](./classDemo.ts) | Todos los ejemplos de Clases del libro (*Listings 4-1 a 4-11*: `Room`, `OyoRoom`, `TreboHotel`). |
-| [`interfaceDemo.ts`](./interfaceDemo.ts) | Todos los ejemplos de Interfaces del libro (*Listings 4-12 a 4-16*: `Naming`, `Greeting`, `Person`, `Dog`). |
+| [`classDemo.ts`](./classDemo.ts) | Versión consolidada de Clases (*Listings 4-4 a 4-11*: `Room`, `OyoRoom`, `TreboHotel`, getter/setter y singleton). |
+| [`interfaceDemo.ts`](./interfaceDemo.ts) | Versión consolidada de Interfaces (*Listings 4-15 y 4-16*: `Naming`, `Greeting`, `Person`, `Dog`). |
 | [`ejercicios.ts`](./ejercicios.ts) | **5 ejercicios prácticos sencillos** para dominar Clases e Interfaces paso a paso. |
 | [`tsconfig.json`](./tsconfig.json) | Configuración del compilador para esta carpeta. |
 

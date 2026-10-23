@@ -43,6 +43,8 @@ flowchart LR
 
 ## 3. Así luce el `tsconfig.json` explicado línea por línea
 
+> ⚠️ **Nota:** los comentarios `//` de este ejemplo son didácticos. Un `tsconfig.json` real no admite comentarios; el archivo [`tsconfig.json`](./tsconfig.json) de esta carpeta es el que debes usar.
+
 ```json
 {
   "compilerOptions": {
@@ -69,7 +71,7 @@ flowchart LR
 | Archivo | ¿Para qué sirve? |
 | :--- | :--- |
 | [`tsconfig.json`](./tsconfig.json) | Configurado con `rootDir: "./src"`, `outDir: "./dist"`, `include` y `exclude`. |
-| [`index.html`](./index.html) | Apunta a `<script src="dist/main.js"></script>` (nota que ahora busca dentro de `dist/`). |
+| [`index.html`](./index.html) | Carga `dist/main.js` y `dist/ejercicios.js` (nota que ahora busca dentro de `dist/`). |
 | [`src/main.ts`](./src/main.ts) | Ejemplo del libro (*Listing 3-1*) dentro de la carpeta `src/`. |
 | [`src/ejercicios.ts`](./src/ejercicios.ts) | 3 ejercicios prácticos sobre configuración y compilación de múltiples archivos. |
 | [`src/roto.ignore.ts`](./src/roto.ignore.ts) | Archivo con un error de tipo a propósito que **no rompe la compilación** porque está en `"exclude"`. |

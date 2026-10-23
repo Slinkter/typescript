@@ -84,13 +84,22 @@ En la línea 408 del libro (*Listing 2-18*), el autor escribió por error comill
   console.log(`${person5.name} is a ${person5.isDev} Dev and is ${person5.age} years old`);
   ```
 
+### 2.5. Errores intencionales del libro
+
+Muchos listings del Capítulo 2 están diseñados para **fallar a propósito** (`myNum = '12'`, `languages.push(56)`, `modNums` devolviendo un boolean, etc.). Copiarlos tal cual rompería la compilación.
+
+En [`basicsDemo.ts`](./basicsDemo.ts) se usan dos técnicas para conservar la enseñanza sin romper el build:
+
+- **Comentarios** con la línea inválida y una explicación (`// ❌ Error...`).
+- **`@ts-expect-error`** en los ejemplos que sí queremos ejecutar para ver el comportamiento en JavaScript (por ejemplo `addNums` sin tipos o `modNums` con retorno incorrecto).
+
 ---
 
 ## 3. Archivos de Práctica en esta Carpeta (`chapter02/`)
 
 | Archivo | ¿Qué contiene? |
 | :--- | :--- |
-| [`basicsDemo.ts`](./basicsDemo.ts) | Todos los ejemplos del libro (*Listings 2-1 a 2-18*) ordenados, limpios y comentados en español. |
+| [`basicsDemo.ts`](./basicsDemo.ts) | Los ejemplos representativos del libro (*Listings 2-1 a 2-18*) ordenados y comentados. Los errores intencionales se muestran comentados o con `@ts-expect-error` para que el archivo compile. |
 | [`ejercicios.ts`](./ejercicios.ts) | **5 ejercicios prácticos sencillos** (con enunciado y solución) para dominar los tipos del Capítulo 2. |
 | [`tsconfig.json`](./tsconfig.json) | Configuración del compilador para esta carpeta. |
 
