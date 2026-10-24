@@ -22,16 +22,16 @@ Repositorio de estudio práctico capítulo por capítulo basado en el libro ***T
 | Cap. | Tema / Proyecto | Líneas en `LIBRO-REACT-2023.md` | Carpeta de Práctica | Estado |
 | :---: | :--- | :---: | :--- | :--- |
 | **01** | Getting Started | `26` – `79` | [`chapter01/`](./chapter01/) (`readme.md`, `main.ts`, `ejercicios.ts`) | ✅ Completado |
-| **02** | TypeScript Basics | `80` – `422` | [`chapter02/`](./chapter02/) (`readme.md`, `basicsDemo.ts`, `ejercicios.ts`) | ✅ Completado |
+| **02** | TypeScript Basics | `80` – `422` | [`chapter02/`](./chapter02/) (`readme.md`, `basicsDemo.ts`, `ejercicios.ts`, `luis.ts`) | ✅ Completado |
 | **03** | The TypeScript Compiler | `423` – `489` | [`chapter03/`](./chapter03/) (`readme.md`, `src/main.ts`, `src/ejercicios.ts`) | ✅ Completado |
 | **04** | Classes and Interfaces | `490` – `954` | [`chapter04/`](./chapter04/) (`readme.md`, `classDemo.ts`, `interfaceDemo.ts`, `ejercicios.ts`) | ✅ Completado |
-| **05** | Advanced Types | `955` – `1210` | [`chapter05/`](./chapter05/) (`readme.md`, `src/advancedDemo.ts`, `src/ejercicios.ts`) | ✅ Completado |
+| **05** | Advanced Types | `955` – `1210` | [`chapter05/`](./chapter05/) (`readme.md`, `src/advancedDemo.ts`, `src/ejercicios.ts`, `src/example.ts`) | ✅ Completado |
 | **06** | Generics and Decorators | `1211` – `1593` | [`chapter06/`](./chapter06/) y [`chapter06a/`](./chapter06a/) | ✅ Completado |
 | **07** | Project: To-do List with TypeScript | `1594` – `1751` | [`chapter07/to-do-list/`](./chapter07/to-do-list/) *(Next.js + Tailwind)* | ✅ Completado |
 | **08** | Project: Drag-and-Drop with TypeScript | `1752` – `2612` | [`chapter08/`](./chapter08/) (`readme.md` y `drag-drop/`) | ✅ Completado |
 | **09** | Improving the Drag-and-Drop Project (ES6 + Webpack) | `2613` – `3024` | [`chapter09/`](./chapter09/) (`readme.md` y `drag-drop/`) | ✅ Completado |
-| **10** | Project: Party App in ReactJS with TypeScript | `3025` – `3299` | [`chapter10/party-app/`](./chapter10/party-app/) *(Vite + React + TS)* | ✅ Completado |
-| **11** | Using React Redux with TypeScript | `3300` – `3502` | [`chapter11/redux-app/`](./chapter11/redux-app/) *(Vite + Redux clásico)* | ✅ Completado |
+| **10** | Project: Party App in ReactJS with TypeScript | `3025` – `3299` | [`chapter10/`](./chapter10/) (`readme.md` y `party-app/` con Vite + React + TS) | ✅ Completado |
+| **11** | Using React Redux with TypeScript | `3300` – `3502` | [`chapter11/`](./chapter11/) (`readme.md` y `redux-app/` con Vite + Redux clásico) | ✅ Completado |
 
 ---
 
@@ -75,8 +75,10 @@ Comprueba tipos (`tsc --noEmit`), ejecución con Node, compilación de los capí
 
 ### Correcciones destacadas
 
+- **Cap. 2:** sincronizados `basicsDemo.js` y `luis.js` con sus fuentes TypeScript.
 - **Cap. 3:** el `index.html` ahora carga `dist/main.js` y `dist/ejercicios.js`.
-- **Cap. 4:** erratas del libro corregidas y documentadas.
+- **Cap. 4:** erratas del libro corregidas y documentadas; `ejercicios.js` incluido en `verify-all.sh`.
+- **Cap. 5:** `src/example.ts` corregido y versionado; `index.html` carga los 3 scripts compilados en `dist/`.
 - **Cap. 6:** genéricos y decoradores completos (antes eran archivos casi vacíos).
 - **Cap. 7:** corregido el tachado de tareas y los placeholders.
 - **Cap. 9:** Webpack `publicPath` corregido y `pnpm dev` añadido.

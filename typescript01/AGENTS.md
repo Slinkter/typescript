@@ -38,16 +38,16 @@ Este archivo es leído automáticamente por Antigravity (`agy`) al trabajar en `
 | :---: | :--- | :---: | :--- | :--- |
 | **Intro** | Introduction | `20` – `25` | — | 📖 Leído |
 | **Cap. 1** | Getting Started | `26` – `79` | `chapter01/` (`readme.md`, `main.ts`, `ejercicios.ts`) | ✅ Completado |
-| **Cap. 2** | TypeScript Basics | `80` – `422` | `chapter02/` (`readme.md`, `basicsDemo.ts`, `ejercicios.ts`) | ✅ Completado |
+| **Cap. 2** | TypeScript Basics | `80` – `422` | `chapter02/` (`readme.md`, `basicsDemo.ts`, `ejercicios.ts`, `luis.ts`) | ✅ Completado |
 | **Cap. 3** | The TypeScript Compiler | `423` – `489` | `chapter03/` (`readme.md`, `src/main.ts`, `src/ejercicios.ts`) | ✅ Completado |
 | **Cap. 4** | Classes and Interfaces | `490` – `954` | `chapter04/` (`readme.md`, `classDemo.ts`, `interfaceDemo.ts`, `ejercicios.ts`) | ✅ Completado |
-| **Cap. 5** | Advanced Types | `955` – `1210` | `chapter05/` (`readme.md`, `src/advancedDemo.ts`, `src/ejercicios.ts`) | ✅ Completado |
+| **Cap. 5** | Advanced Types | `955` – `1210` | `chapter05/` (`readme.md`, `src/advancedDemo.ts`, `src/ejercicios.ts`, `src/example.ts`) | ✅ Completado |
 | **Cap. 6** | Generics and Decorators | `1211` – `1593` | `chapter06/` (`genericDemo.ts` + `readme.md`) y `chapter06a/` (`decoratorsDemo.ts` + `readme.md`) | ✅ Completado |
 | **Cap. 7** | Creating a To-do List Project with TypeScript | `1594` – `1751` | `chapter07/to-do-list/` (Adaptado a Next.js + React + Tailwind CSS) | ✅ Completado |
 | **Cap. 8** | Creating a Drag-and-Drop Project with TypeScript | `1752` – `2612` | `chapter08/` (`readme.md` y `drag-drop/`) | ✅ Completado |
 | **Cap. 9** | Improving the Drag-and-Drop Project | `2613` – `3024` | `chapter09/` (`readme.md` y `drag-drop/` con ES6 Modules + Webpack) | ✅ Completado |
-| **Cap. 10** | Creating a Party App in ReactJS with TypeScript | `3025` – `3299` | `chapter10/party-app/` (Vite + React + TS) | ✅ Completado |
-| **Cap. 11** | Using React Redux with TypeScript | `3300` – `3502` | `chapter11/redux-app/` (Vite + React + Redux clásico) | ✅ Completado |
+| **Cap. 10** | Creating a Party App in ReactJS with TypeScript | `3025` – `3299` | `chapter10/` (`readme.md` y `party-app/` con Vite + React + TS) | ✅ Completado |
+| **Cap. 11** | Using React Redux with TypeScript | `3300` – `3502` | `chapter11/` (`readme.md` y `redux-app/` con Vite + React + Redux clásico) | ✅ Completado |
 
 ---
 
@@ -80,8 +80,10 @@ El script comprueba:
 
 ### Notas de correcciones recientes
 
+- **Cap. 2:** `basicsDemo.js` y `luis.js` recompilados y sincronizados con sus respectivos `.ts`.
 - **Cap. 3:** `index.html` ahora carga `dist/main.js` y `dist/ejercicios.js` (antes apuntaba a `dist/example.js`).
-- **Cap. 4:** erratas del libro corregidas y documentadas (template strings rotos, `kapil` con `'Shobha'`).
+- **Cap. 4:** erratas del libro corregidas y documentadas (template strings rotos, `kapil` con `'Shobha'`); `ejercicios.js` incluido en `verify-all.sh`.
+- **Cap. 5:** `src/example.ts` corregido y versionado; `index.html` carga `dist/advancedDemo.js`, `dist/ejercicios.js` y `dist/example.js`.
 - **Cap. 6:** se completaron genéricos y decoradores; `chapter06a/tsconfig.json` habilita `experimentalDecorators`.
 - **Cap. 7:** corregido el `line-through` de las tareas y los placeholders.
 - **Cap. 9:** `publicPath` de Webpack corregido a `/dist/` y añadido `pnpm dev`.
@@ -123,7 +125,7 @@ El script comprueba:
 4. **Un capítulo = una carpeta:** no mezclar prácticas personales con demos del libro. No borrar archivos personales (`luis.ts`, `example.ts`) sin confirmación.
 5. **Builds:** toda app debe pasar su build antes de darse por terminada. No actualizar dependencias mayores “por actualizar”.
 6. **Commits:** formato Conventional Commits, por ejemplo `feat(ch10): implementar party app` o `docs: actualizar memoria`.
-7. **Artefactos:** `node_modules/`, `dist/` y `.next/` están ignorados. Los `.js` de 01, 02, 04, 06 y 06a se versionan porque los carga su `index.html`.
+7. **Artefactos:** `node_modules/`, `dist/` y `.next/` están ignorados. Los `.js` de 01, 02, 04, 06 y 06a se versionan porque los carga su `index.html` (recuerda ejecutar `npx tsc` en esa carpeta si modificas su `.ts`).
 8. **Rutas del libro:** usar el mapa de la sección 3 para leer solo el rango necesario; no cargar el libro completo.
 
 ---
