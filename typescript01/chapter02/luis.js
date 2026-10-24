@@ -14,7 +14,7 @@ const listCarrito = [
     },
 ];
 let total = 0;
-listCarrito.map((x) => {
+for (const x of listCarrito) {
     total = total + x.precio;
-});
+}
 console.log(total);

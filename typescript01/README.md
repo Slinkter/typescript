@@ -92,7 +92,8 @@ Comprueba tipos (`tsc --noEmit`), ejecución con Node, compilación de los capí
 - **Cap. 10:** se mantiene Vite + React 18 (el andamiaje ya existía); no se migró a Next.js.
 - **Cap. 11:** Redux clásico fiel al libro, con `redux-thunk@2.4.2` para ser compatible con Redux 4. Una variante con Redux Toolkit queda como mejora opcional.
 - **Artefactos:** los `.js` de los capítulos 01, 02, 04, 06 y 06a se versionan para poder abrir sus `index.html` sin compilar; los `dist/` y `node_modules/` están ignorados.
-- **Archivo personal:** `chapter05/src/example.ts` es una práctica del usuario y se dejó intacta (sin commitear en la limpieza automática).
+- **Archivo personal:** `chapter05/src/example.ts` (práctica del usuario sobre Discriminated Unions) está corregido y versionado junto con `chapter05/index.html`.
+- **Memoria en raíz de Git:** `../AGENTS.md` enlaza automáticamente a `./AGENTS.md` para que Antigravity cargue siempre el contexto sin importar si se abre desde la raíz del repositorio o desde `typescript01/`.
 - **Erratas del libro:** las correcciones están documentadas en los readmes de los capítulos 02, 04, 06, 06a y 11.
 
 ---

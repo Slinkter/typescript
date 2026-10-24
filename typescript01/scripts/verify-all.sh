@@ -52,7 +52,7 @@ done
 # --- Ejecución de demos con Node -----------------------------------------
 run "node · chapter01" bash -c 'cd chapter01 && node main.js >/dev/null && node ejercicios.js >/dev/null'
 run "node · chapter02" bash -c 'cd chapter02 && node basicsDemo.js >/dev/null && node ejercicios.js >/dev/null'
-run "node · chapter04" bash -c 'cd chapter04 && node classDemo.js >/dev/null && node interfaceDemo.js >/dev/null'
+run "node · chapter04" bash -c 'cd chapter04 && node classDemo.js >/dev/null && node interfaceDemo.js >/dev/null && node ejercicios.js >/dev/null'
 run "node · chapter06" bash -c 'cd chapter06 && node genericDemo.js >/dev/null'
 run "node · chapter06a" bash -c 'cd chapter06a && node decoratorsDemo.js >/dev/null'
 

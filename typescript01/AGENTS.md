@@ -110,7 +110,8 @@ El script comprueba:
 ./scripts/verify-all.sh   # 22 correctos, 0 fallos
 ```
 
-**Archivo personal pendiente:** `chapter05/src/example.ts` es una práctica del usuario. No se modificó, no se borró y se dejó sin commitear. Si el usuario pide limpiar el árbol de Git, pregúntale si quiere versionarlo o descartarlo.
+**Archivo personal versionado:** `chapter05/src/example.ts` es la práctica del usuario sobre Discriminated Unions y ahora está corregida y versionada junto con `chapter05/index.html`.
+**Blindaje de memoria en raíz Git:** Existe `/home/user/github/typescript/AGENTS.md` apuntando a este archivo para que Antigravity (`agy`) cargue siempre esta memoria incluso si el workspace se abre en la carpeta raíz del repositorio Git.
 
 ---
 
@@ -131,6 +132,5 @@ El script comprueba:
 
 - Añadir una variante del Capítulo 11 con **Redux Toolkit** (`configureStore`, `createSlice`).
 - Añadir pruebas automatizadas de navegador con **Playwright** para 07, 08, 09, 10 y 11.
-- Decidir si `chapter05/src/example.ts` se versiona o se elimina.
 - Migrar el Capítulo 10 a Next.js si el usuario quiere practicar App Router (hoy usa Vite).
 - Unificar los capítulos 01–06 en una sola configuración raíz de TypeScript si el proyecto crece.
