@@ -2,6 +2,10 @@
 
 Repositorio de estudio práctico capítulo por capítulo basado en el libro ***TypeScript Basics: Learn TypeScript from Scratch and Solidify Your Skills with Projects*** (Nabendu Biswas, 2023).
 
+> **Estado actual:** ✅ **11/11 capítulos completados y verificados** (22 comprobaciones correctas, 0 fallos).
+>
+> Última actualización: **2026-10-23**.
+
 ---
 
 ## 📖 Recursos del Libro en este Repositorio
@@ -31,6 +35,36 @@ Repositorio de estudio práctico capítulo por capítulo basado en el libro ***T
 
 ---
 
+## 🧱 Stack de los Proyectos
+
+| Cap. | Stack | Comando principal |
+| :---: | :--- | :--- |
+| 01–05 | TypeScript puro + `tsc` | `npx tsc` / `node archivo.js` |
+| 06 | Genéricos y decoradores (`experimentalDecorators`) | `npx tsc` |
+| 06a | Decoradores + DOM | `npx tsc` |
+| 07 | Next.js 16 + React 19 + Tailwind 4 | `pnpm dev` / `pnpm build` |
+| 08 | TypeScript + DOM + Drag & Drop | `npm run build` + `npx serve .` |
+| 09 | ES6 Modules + Webpack 5 + `ts-loader` | `pnpm build` / `pnpm dev` |
+| 10 | Vite 6 + React 18 + TypeScript | `npm run dev` / `npm run build` |
+| 11 | Vite 6 + React 18 + Redux 4 + `redux-thunk` 2 | `npm run dev` / `npm run build` |
+
+---
+
+## ⚙️ Requisitos
+
+- **Node.js 20+** (probado con Node 24).
+- **npm 10+** y, para los capítulos 07 y 09, **pnpm 9+**.
+- Bash para ejecutar `scripts/verify-all.sh` (Linux/macOS/WSL/Git Bash).
+
+```bash
+# Instalar dependencias de las apps
+cd chapter07/to-do-list && pnpm install
+cd ../chapter10/party-app && npm install
+cd ../chapter11/redux-app && npm install
+```
+
+---
+
 ## ✅ Verificación Global
 
 ```bash
@@ -48,6 +82,18 @@ Comprueba tipos (`tsc --noEmit`), ejecución con Node, compilación de los capí
 - **Cap. 9:** Webpack `publicPath` corregido y `pnpm dev` añadido.
 - **Cap. 10:** Party App implementada (los 4 archivos estaban en 0 bytes).
 - **Cap. 11:** app Redux creada desde cero.
+
+---
+
+## 📝 Decisiones y Notas
+
+- **Cap. 07:** se mantiene la adaptación a Next.js + Tailwind en lugar de Snowpack.
+- **Cap. 09:** Webpack genera `dist/bundle.js`; `pnpm dev` levanta `webpack serve` en `http://localhost:8080`.
+- **Cap. 10:** se mantiene Vite + React 18 (el andamiaje ya existía); no se migró a Next.js.
+- **Cap. 11:** Redux clásico fiel al libro, con `redux-thunk@2.4.2` para ser compatible con Redux 4. Una variante con Redux Toolkit queda como mejora opcional.
+- **Artefactos:** los `.js` de los capítulos 01, 02, 04, 06 y 06a se versionan para poder abrir sus `index.html` sin compilar; los `dist/` y `node_modules/` están ignorados.
+- **Archivo personal:** `chapter05/src/example.ts` es una práctica del usuario y se dejó intacta (sin commitear en la limpieza automática).
+- **Erratas del libro:** las correcciones están documentadas en los readmes de los capítulos 02, 04, 06, 06a y 11.
 
 ---
 

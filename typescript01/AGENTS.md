@@ -7,9 +7,10 @@ Este archivo es leído automáticamente por Antigravity (`agy`) al trabajar en `
 ## 1. Contexto del Proyecto y Libro de Estudio
 
 - **Objetivo:** Estudiar capítulo por capítulo el libro *TypeScript Basics: Learn TypeScript from Scratch and Solidify Your Skills with Projects* (Nabendu Biswas, 2023) y desarrollar las prácticas en carpetas dedicadas (`chapterXX`).
-- **Libro en Markdown (Limpio y Formateado):** `C:\Users\luisj\Github\typescript\typescript01\LIBRO-REACT-2023.md` (3,502 líneas, con 133 bloques de código cercados ` ```typescript ` / ` ```tsx ` / ` ```html ` y sin relleno editorial).
-- **Imágenes del Libro (`Figure X-Y`):** Extraídas en `C:\Users\luisj\Github\typescript\typescript01\book_images\` (69 capturas de pantalla vinculadas dentro de `LIBRO-REACT-2023.md`).
-- **PDF Original:** `C:\Users\luisj\Github\typescript\typescript01\LIBRO-REACT-2023.pdf`.
+- **Ruta del workspace:** `C:\Users\luisj\Github\typescript\typescript01` en Windows; en este entorno Linux: `/home/user/github/typescript/typescript01`.
+- **Libro en Markdown (Limpio y Formateado):** [`LIBRO-REACT-2023.md`](./LIBRO-REACT-2023.md) (3,502 líneas, con 133 bloques de código cercados ` ```typescript ` / ` ```tsx ` / ` ```html ` y sin relleno editorial).
+- **Imágenes del Libro (`Figure X-Y`):** Extraídas en [`book_images/`](./book_images/) (69 capturas de pantalla vinculadas dentro de `LIBRO-REACT-2023.md`).
+- **PDF Original:** [`LIBRO-REACT-2023.pdf`](./LIBRO-REACT-2023.pdf).
 
 ---
 
@@ -25,7 +26,9 @@ Este archivo es leído automáticamente por Antigravity (`agy`) al trabajar en `
 2. **Lectura Eficiente por Capítulos:**
    - Para estudiar o responder dudas de un capítulo específico, **NO leas todo `LIBRO-REACT-2023.md`**. Usa `view_file` con `StartLine` y `EndLine` guiándote por el Mapa Exacto de Capítulos de abajo.
 3. **Modernización de Proyectos (Preferencia del Usuario):**
-   - En los capítulos prácticos (como se hizo en `chapter07/to-do-list`), el usuario suele preferir o practicar tanto con TypeScript puro como modernizando los proyectos a **Next.js (App Router) + React + TypeScript + Tailwind CSS** en lugar de ferramentas obsoletas como Snowpack. Pregunta siempre si desea hacerlo en Vanilla TS (como en el libro) o modernizado con React/Next.js.
+   - En los capítulos prácticos el usuario prefiere modernizar herramientas obsoletas (Snowpack, CRA) a stacks actuales, manteniendo el objetivo didáctico del libro.
+   - Decisiones ya tomadas: **Cap. 7** → Next.js + Tailwind; **Cap. 10** → Vite + React; **Cap. 11** → Vite + React + Redux clásico.
+   - Para cambios de stack futuros, pregunta antes de migrar una app ya funcional.
 
 ---
 
@@ -84,3 +87,50 @@ El script comprueba:
 - **Cap. 9:** `publicPath` de Webpack corregido a `/dist/` y añadido `pnpm dev`.
 - **Cap. 10:** Party App implementada (los 4 archivos estaban vacíos).
 - **Cap. 11:** app Redux creada con Redux clásico; `redux-thunk@2.4.2` para compatibilidad con Redux 4.
+
+---
+
+## 6. Estado Actual del Workspace (2026-10-23)
+
+**Todos los capítulos están completados y verificados.** No queda trabajo obligatorio del plan.
+
+| Cap. | Estado | Stack / entrada |
+| :---: | :--- | :--- |
+| 01–05 | ✅ | TypeScript puro + `tsc` |
+| 06 / 06a | ✅ | Genéricos + decoradores (`experimentalDecorators`) |
+| 07 | ✅ | Next.js 16 + React 19 + Tailwind 4 (`pnpm dev`) |
+| 08 | ✅ | TS + DOM (`npm run build`, `npx serve .`) |
+| 09 | ✅ | ES6 Modules + Webpack 5 (`pnpm build`, `pnpm dev`) |
+| 10 | ✅ | Vite 6 + React 18 (`npm run dev`) |
+| 11 | ✅ | Vite 6 + React 18 + Redux 4 + `redux-thunk` 2 (`npm run dev`) |
+
+**Comprobación rápida:**
+
+```bash
+./scripts/verify-all.sh   # 22 correctos, 0 fallos
+```
+
+**Archivo personal pendiente:** `chapter05/src/example.ts` es una práctica del usuario. No se modificó, no se borró y se dejó sin commitear. Si el usuario pide limpiar el árbol de Git, pregúntale si quiere versionarlo o descartarlo.
+
+---
+
+## 7. Convenciones para Futuras Sesiones
+
+1. **Idioma:** comentarios, readmes y explicaciones en **español**; nombres de código en inglés cuando el libro los usa.
+2. **TypeScript estricto:** `strict: true`; evitar `any`. Para demostrar errores intencionales del libro, usar `// @ts-expect-error` con una explicación, no desactivar `strict`.
+3. **Fidelidad didáctica:** si el libro tiene una errata, corregirla y documentarla en una sección “Erratas corregidas” del readme del capítulo.
+4. **Un capítulo = una carpeta:** no mezclar prácticas personales con demos del libro. No borrar archivos personales (`luis.ts`, `example.ts`) sin confirmación.
+5. **Builds:** toda app debe pasar su build antes de darse por terminada. No actualizar dependencias mayores “por actualizar”.
+6. **Commits:** formato Conventional Commits, por ejemplo `feat(ch10): implementar party app` o `docs: actualizar memoria`.
+7. **Artefactos:** `node_modules/`, `dist/` y `.next/` están ignorados. Los `.js` de 01, 02, 04, 06 y 06a se versionan porque los carga su `index.html`.
+8. **Rutas del libro:** usar el mapa de la sección 3 para leer solo el rango necesario; no cargar el libro completo.
+
+---
+
+## 8. Pendientes Opcionales (no bloqueantes)
+
+- Añadir una variante del Capítulo 11 con **Redux Toolkit** (`configureStore`, `createSlice`).
+- Añadir pruebas automatizadas de navegador con **Playwright** para 07, 08, 09, 10 y 11.
+- Decidir si `chapter05/src/example.ts` se versiona o se elimina.
+- Migrar el Capítulo 10 a Next.js si el usuario quiere practicar App Router (hoy usa Vite).
+- Unificar los capítulos 01–06 en una sola configuración raíz de TypeScript si el proyecto crece.
