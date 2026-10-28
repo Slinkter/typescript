@@ -1,4 +1,12 @@
-# Dependencies
+# ============================================================
+# .gitignore raíz — repositorio `typescript`
+# Regla de oro: los artefactos generados (deps, builds, cachés)
+# nunca se versionan; los `.js` compilados SÍ se versionan solo en
+# typescript01/chapter01, 02, 04, 06 y 06a, porque sus index.html
+# los cargan directamente.
+# ============================================================
+
+# ---------- Dependencias ----------
 node_modules/
 /.pnp
 .pnp.*
@@ -7,26 +15,41 @@ node_modules/
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+pnpm-store/
+.pnpm-store/
 
-# Next.js / Build outputs
+# ---------- Salidas de build ----------
 .next/
 out/
 build/
 dist/
+*.tsbuildinfo
+next-env.d.ts
 
-# Production & Packaging
+# ---------- Cachés de bundlers y linters ----------
+.vite/
+.cache/
+.parcel-cache/
+.eslintcache
+.turbo/
+.vercel/
+.snowpack/
+.webpack/
+
+# ---------- Empaquetado ----------
 *.tgz
 *.tar.gz
 
-# Environment files
+# ---------- Variables de entorno ----------
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 .env*.local
+!.env.example
 
-# Logs
+# ---------- Logs ----------
 logs
 *.log
 npm-debug.log*
@@ -35,19 +58,25 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Testing & Coverage
+# ---------- Testing ----------
 coverage/
 .nyc_output/
+playwright-report/
+test-results/
 
-# TypeScript cache
-*.tsbuildinfo
-next-env.d.ts
+# ---------- Restos de Git ----------
+*.orig
+*.rej
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
 
-# Vercel / Turbopack
-.vercel
-.turbo
+# ---------- Herramientas locales ----------
+.opencode/
+.docusaurus/
 
-# IDE & Editors
+# ---------- IDEs y editores ----------
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -55,9 +84,11 @@ next-env.d.ts
 !.vscode/extensions.json
 .idea/
 *.sublime-workspace
+*.sublime-project
 *.swp
 *.swo
 
-# OS files
+# ---------- Sistema operativo ----------
 .DS_Store
 Thumbs.db
+desktop.ini

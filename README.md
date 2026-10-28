@@ -11,6 +11,9 @@ Repositorio principal de prácticas y proyectos con **TypeScript, React, Next.js
   - 🤖 [Memoria del Agente (`typescript01/AGENTS.md`)](./typescript01/AGENTS.md)
   - 📘 [Libro en Markdown (`typescript01/LIBRO-REACT-2023.md`)](./typescript01/LIBRO-REACT-2023.md)
 - **[`AGENTS.md`](./AGENTS.md)** — Puente de memoria en la raíz del repositorio Git para que Antigravity (`agy`) cargue automáticamente las reglas sin importar si abres la sesión desde la raíz o desde `typescript01/`.
+- **Playgrounds personales** (fuera del recorrido del libro):
+  - [`typescript02/`](./typescript02/) — Conditional types, `infer`, utility types, clases y `static`. Ver [README](./typescript02/README.md).
+  - [`typescript04/`](./typescript04/) — Mapped types (en progreso). Ver [README](./typescript04/README.md).
 
 ## 🗺️ Resumen de Capítulos (`typescript01/`)
 
