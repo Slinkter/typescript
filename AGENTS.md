@@ -16,3 +16,5 @@ Carpetas personales de práctica, **no** forman parte del recorrido de los 11 ca
 | `typescript04/` | Mapped types (en progreso) | `npm run typecheck` / `npm run build` / `npm run dev` | [`typescript04/README.md`](./typescript04/README.md) |
 
 Ambas usan TypeScript 7 y `strict: true`. Cada una tiene su propio `.gitignore` que impide versionar salidas de `tsc` dentro de `src/`; la compilación va siempre a `dist/`.
+
+**Guía de Git:** el [`README.md`](./README.md) raíz incluye la sección “🌿 Git para estudiar y repasar” (merge-base, fast-forward, merge vs rebase, reflog, conflictos, Conventional Commits y el caso real resuelto el 28/10/2026).

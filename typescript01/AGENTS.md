@@ -89,10 +89,12 @@ El script comprueba:
 - **Cap. 9:** `publicPath` de Webpack corregido a `/dist/` y añadido `pnpm dev`.
 - **Cap. 10:** Party App implementada (los 4 archivos estaban vacíos).
 - **Cap. 11:** app Redux creada con Redux clásico; `redux-thunk@2.4.2` para compatibilidad con Redux 4.
+- **Playgrounds (28/10/2026):** `typescript02` y `typescript04` recibieron scripts (`build`/`typecheck`/`dev`), README y `strict` sin `verbatimModuleSyntax` (incompatible con `module: CommonJS` en cuanto haya un `import`). Ver sección 9.
+
 
 ---
 
-## 6. Estado Actual del Workspace (2026-10-23)
+## 6. Estado Actual del Workspace (2026-10-28)
 
 **Todos los capítulos están completados y verificados.** No queda trabajo obligatorio del plan.
 
@@ -115,6 +117,9 @@ El script comprueba:
 **Archivo personal versionado:** `chapter05/src/example.ts` es la práctica del usuario sobre Discriminated Unions y ahora está corregida y versionada junto con `chapter05/index.html`.
 **Blindaje de memoria en raíz Git:** Existe `/home/user/github/typescript/AGENTS.md` apuntando a este archivo para que Antigravity (`agy`) cargue siempre esta memoria incluso si el workspace se abre en la carpeta raíz del repositorio Git.
 
+**Playgrounds fuera del libro:** `typescript02/` y `typescript04/` viven en la raíz del repositorio, **no** dentro de `typescript01/`, y no los cubre `verify-all.sh`. Ver sección 9.
+
+
 ---
 
 ## 7. Convenciones para Futuras Sesiones
@@ -127,6 +132,8 @@ El script comprueba:
 6. **Commits:** formato Conventional Commits, por ejemplo `feat(ch10): implementar party app` o `docs: actualizar memoria`.
 7. **Artefactos:** `node_modules/`, `dist/` y `.next/` están ignorados. Los `.js` de 01, 02, 04, 06 y 06a se versionan porque los carga su `index.html` (recuerda ejecutar `npx tsc` en esa carpeta si modificas su `.ts`).
 8. **Rutas del libro:** usar el mapa de la sección 3 para leer solo el rango necesario; no cargar el libro completo.
+9. **Git:** mensajes en Conventional Commits (`tipo(scope): descripción`), en imperativo y minúscula. Integrar con `git pull --rebase` (`pull.rebase = true`); nunca rebase sobre commits ya publicados. Ante divergencia: `git fetch` → revisar `git log --oneline HEAD..origin/main` y `git show --stat` → `git rebase origin/main`. Antes de operaciones destructivas, crear `git branch backup/<motivo>`. Flujo completo documentado en la sección “🌿 Git para estudiar y repasar” del [`README.md`](../README.md) raíz.
+10. **`.gitignore`:** el raíz ignora `node_modules/`, `dist/`, `.next/`, `out/`, `build/`, cachés (`.vite/`, `.cache/`, `.turbo/`, `.eslintcache`), `.opencode/` y restos de Git (`*.orig`, `*.rej`). Los playgrounds tienen `.gitignore` propio que bloquea salidas de `tsc` dentro de `src/`. **Excepción intencional:** los `.js` de `chapter01`, `02`, `04`, `06` y `06a` sí se versionan porque sus `index.html` los cargan directamente.
 
 ---
 
@@ -136,3 +143,34 @@ El script comprueba:
 - Añadir pruebas automatizadas de navegador con **Playwright** para 07, 08, 09, 10 y 11.
 - Migrar el Capítulo 10 a Next.js si el usuario quiere practicar App Router (hoy usa Vite).
 - Unificar los capítulos 01–06 en una sola configuración raíz de TypeScript si el proyecto crece.
+- `typescript04`: completar el **mapped type** que está comentado en `src/index.ts` y verificar que equivale a `Partial<Usuario>`.
+- Incluir `typescript02` y `typescript04` en `scripts/verify-all.sh` (hoy están fuera; el recuento documentado sigue siendo **22 correctos**).
+
+---
+
+## 9. Playgrounds personales (fuera del libro)
+
+Carpetas de práctica en la **raíz** del repositorio, no dentro de `typescript01/`. No forman parte del recorrido de los 11 capítulos ni del recuento de `verify-all.sh`.
+
+| Carpeta | Tema | Entrada / comandos | Notas |
+| :--- | :--- | :--- | :--- |
+| `typescript02/` | Conditional types + `infer`, utility types, clases, `static` | `npm run typecheck`, `npm run build`, `npm run dev` | 5 lecciones en `src/`; `index.ts` solo declara tipos (emite `dist/index.js` vacío). `dev` ejecuta `dist/index.04.js`. |
+| `typescript04/` | Mapped types (**en progreso**) | `npm run typecheck`, `npm run build`, `npm run dev` | Recuperado del remoto el 26/10/2026; venía con `"name": "typescript03"` (corregido). |
+
+Reglas comunes:
+
+- TypeScript 7 (`^7.0.2`), `strict: true`, sin `any`.
+- **`verbatimModuleSyntax` desactivado**: con `module: CommonJS` prohíbe la sintaxis ESM y rompería cualquier `import`.
+- Cada playground tiene su `.gitignore` con `dist/`, `node_modules/` y `src/**/*.js` para no repetir el error de versionar salidas de `tsc` dentro de `src/`.
+- `dist/` es desechable: si el contenido no coincide con las fuentes, `rm -rf dist && npm run build`.
+- Tienen README propio en español con la sección “Correcciones aplicadas”.
+
+---
+
+## 10. Registro de Sesiones
+
+| Fecha | Trabajo realizado |
+| :--- | :--- |
+| 2026-10-23 | Completados y verificados los capítulos 01–11; creada la verificación global. |
+| 2026-10-28 | Resuelta la **divergencia Git** (`ahead 11, behind 1`): `backup/pre-rebase` → `fetch` → `rebase origin/main` → `push` fast-forward. Recuperado `typescript04/`. Modernizados `typescript02` y `typescript04` (scripts, README, tsconfig). Reorganizado `.gitignore` (+ locales por playground). Añadida la guía **“🌿 Git para estudiar y repasar”** al `README.md` raíz. |
+
