@@ -2,7 +2,7 @@ type Usuario = {
   nombre: string;
   edad: number;
   direccion: string;
-  sexo: "masculino" | "feminio";
+  sexo: "masculino" | "femenino";
   cp: number;
 };
 

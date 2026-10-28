@@ -53,8 +53,8 @@ const angel = new User("Luis", "Cave", 20, "hola@.com");
 const ana = new User("ana", "razor", 23, "colito@gmail.com");
 angel.setEmail("angel-2@gmail.cm");
 angel.showEmail();
-console.log(angel.getInfo);
-console.log(ana.getInfo);
+angel.getInfo();
+ana.getInfo();
 console.log(ana.showEmail());
 
 // https://www.youtube.com/watch?v=VI6GzKEl4v4&t=5794s

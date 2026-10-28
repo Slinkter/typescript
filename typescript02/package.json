@@ -1,9 +1,12 @@
 {
   "name": "typescript02",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Playground de tipos avanzados: conditional types, infer, utility types, clases y static",
+  "main": "dist/index.04.js",
   "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "dev": "tsc && node ./dist/index.04.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
