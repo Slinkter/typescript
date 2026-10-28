@@ -3,9 +3,18 @@
     "strings": "on"
   },
   "tailwindCSS.experimental.classRegex": [
-    ["(?:class|className|style)\\s*[:=]\\s*[\"']([^\"']*)[\"']", "([^\"']*)"],
-    ["(?:main|header|footer|card|container|button)\\s*:\\s*[\"']([^\"']*)[\"']", "([^\"']*)"],
-    ["(?:style|styles)\\s*=\\s*\\{([\\s\\S]*?)\\}", "[\"']([^\"']*)[\"']"]
+    [
+      "(?:class|className|style)\\s*[:=]\\s*[\"']([^\"']*)[\"']",
+      "([^\"']*)"
+    ],
+    [
+      "(?:main|header|footer|card|container|button)\\s*:\\s*[\"']([^\"']*)[\"']",
+      "([^\"']*)"
+    ],
+    [
+      "(?:style|styles)\\s*=\\s*\\{([\\s\\S]*?)\\}",
+      "[\"']([^\"']*)[\"']"
+    ]
   ],
   "tailwindCSS.includeLanguages": {
     "typescript": "javascript",
