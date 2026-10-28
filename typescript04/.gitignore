@@ -1,0 +1,9 @@
+# Playground personal: la compilación vive en dist/, nunca en src/
+dist/
+node_modules/
+
+# Evita volver a versionar salidas de tsc mezcladas con las fuentes
+src/**/*.js
+src/**/*.d.ts
+src/**/*.js.map
+src/**/*.d.ts.map
